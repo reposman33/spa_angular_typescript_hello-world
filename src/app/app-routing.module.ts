@@ -39,6 +39,14 @@ const routes: Routes = [
     loadChildren: () => import('./features/callback/callback.module').then((m) => m.CallbackModule)
   },
   {
+    path: 'settings',
+    loadChildren: () =>
+      import('./features/settings/settings.module').then(
+        (m) => m.SettingsModule
+      ),
+      canActivate: [AuthGuard],
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./features/not-found/not-found.module').then(
