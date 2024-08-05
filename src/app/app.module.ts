@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { SharedModule } from './shared';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({ 
     declarations: [AppComponent],
@@ -16,5 +17,5 @@ import { SharedModule } from './shared';
         AppRoutingModule,
         SharedModule
     ],
-    providers: [provideHttpClient()] })
+    providers: [provideHttpClient(), provideAnimationsAsync()] })
 export class AppModule {}
