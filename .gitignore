@@ -749,8 +749,3 @@ env.json
 .vercel
 src/environments/environment.ts
 .angular
-
-
-
-.nx/cache
-.nx/workspace-data
